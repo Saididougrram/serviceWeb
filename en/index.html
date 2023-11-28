@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/home.css">
+    <base href="../">
+    <title>idougrram</title>
+</head>
+<body>
+    
+    <!--header-->
+    <header>
+        <article class="wc-sb">
+            <div class="left-hed">
+                <div class="logo-bord wcc">
+                    <img src="src/img/logo.png" alt="">
+                </div>
+                <div class="name-bord wcc">
+                    <h1>idougrram</h1>
+                </div>
+            </div>
+            <div class="right-hed">
+                <div class="buttons wcc">
+                    <button title="like" id="like" style="">like</button>
+                    <button title="start" style="margin-left: 10px;">start now</button>
+                </div>
+                <script>
+                    var like = localStorage.getItem("like");
+                    const likeD = document.getElementById("like");
+                    console.log(like);
+
+                    if (like == null){
+                        localStorage.setItem("like","0");
+                        likeD.setAttribute("style" , "background-color: var(--wihte);border: 2px solid var(--black);color: var(--black);");
+                    }else if (like == "0"){
+                        likeD.setAttribute("style" , "background-color: var(--wihte);border: 2px solid var(--black);color: var(--black);");
+                    }else if (like == "1"){
+                        likeD.setAttribute("style" , "background-color: #ff4f4f;border: 2px solid #ff4f4f;color: var(--white);");
+                    }else {
+                        localStorage.setItem("like","0");
+                        likeD.setAttribute("style" , "background-color: var(--wihte);border: 2px solid var(--black);color: var(--black);");
+                    }
+
+                    likeD.addEventListener("click" , ()=>{
+                        if(like == "0"){
+                            localStorage.setItem("like","1");
+                            likeD.setAttribute("style" , "background-color: #ff4f4f;border: 2px solid #ff4f4f;color: var(--white);");
+                        }else {
+                            localStorage.setItem("like","0");
+                            likeD.setAttribute("style" , "background-color: var(--wihte);border: 2px solid var(--black);color: var(--black);");
+                        }
+                        like = localStorage.getItem("like");
+                        console.log(like);
+                    })
+                </script>
+                <div class="laung wcc">
+                    <div class="laung-bord wcc">
+                        <div class="laung-div">
+                            <img src="src/img/us.png" alt="">
+                        </div>
+                        <div class="laung-div">
+                            <p>EN</p>
+                        </div>
+                        <div class="laung-div">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512" fill="#555555"><path d="M6.41,9H17.59a1,1,0,0,1,.7,1.71l-5.58,5.58a1,1,0,0,1-1.42,0L5.71,10.71A1,1,0,0,1,6.41,9Z"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right2-hed wcc">
+                <img src="src/img/nav.png" alt="">
+            </div>
+        </article>
+    </header>
+    <!--intro-->
+    <section class="intro">
+        <article class="intro-bord wcc">
+            <div class="hi" style="margin-top: 40px;">
+                <h1>Get the website you want</h1>
+            </div>
+            <div class="hi">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem hic tempore natus nemo, impedit voluptatibus?</h3>
+            </div>
+            <div class="hi wcc" style="display: flex;gap: 20px;margin-bottom: 40px;">
+                <button>pay now</button>
+                <button class="btn2">explore</button>
+            </div>
+        </article>
+    </section>
+    <!--servers-->
+    <section>
+        <article class="title">
+            <h1>My services</h1>
+        </article>
+        <article class="serv-box">
+            
+            <div class="serv-post">
+                <div class="top-post wcc">
+                    <img src="src/img/bn2.png" alt="">
+                </div>
+                <div class="body-post">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam delectus suscipit doloremque deleniti expedita inventore! Dolor veritatis deleniti similique magnam minus neque inventore impedit aliquid.</p>
+                </div>
+                <div class="bottom-post">
+                    <button>bay 5.00$</button>
+                </div>
+            </div>
+            <div class="serv-post">
+                <div class="top-post wcc">
+                    <img src="src/img/bn2.png" alt="">
+                </div>
+                <div class="body-post">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam delectus suscipit doloremque deleniti expedita inventore! Dolor veritatis deleniti similique magnam minus neque inventore impedit aliquid.</p>
+                </div>
+                <div class="bottom-post">
+                    <button>bay 5.00$</button>
+                </div>
+            </div>
+            <div class="serv-post">
+                <div class="top-post wcc">
+                    <img src="src/img/bn2.png" alt="">
+                </div>
+                <div class="body-post">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam delectus suscipit doloremque deleniti expedita inventore! Dolor veritatis deleniti similique magnam minus neque inventore impedit aliquid.</p>
+                </div>
+                <div class="bottom-post">
+                    <button>bay 5.00$</button>
+                </div>
+            </div>
+
+        </article>
+    </section>
+    <!--info-->
+    <section>
+        <article class="info-box">
+            <div class="info-left">
+                <img src="src/img/Personal-site-amico.png"  style="background-color: #f6c9ff;">
+            </div>
+            <div class="info-right wcc">
+                <div class="info-my">
+                    <h1>ABOUT ME</h1>
+                </div>
+                <div class="info-my">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora voluptatum iste labore? Quam voluptas vel, repellendus accusamus, ex aperiam voluptates, repellat voluptatum distinctio dolorum pariatur repudiandae magnam quo doloribus nisi!</p>
+                </div>
+            </div>
+        </article>
+        <article class="info-box" style="margin-top: 20px;direction: rtl;">
+            <div class="info-left">
+                <img src="src/img/Soft-skills-pana.png"  style="background-color: #ffb7ac;">
+            </div>
+            <div class="info-right wcc">
+                <div class="info-my">
+                    <h1>MY SKILS</h1>
+                </div>
+                <div class="info-my">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora voluptatum iste labore? Quam voluptas vel, repellendus accusamus, ex aperiam voluptates, repellat voluptatum distinctio dolorum pariatur repudiandae magnam quo doloribus nisi!</p>
+                </div>
+            </div>
+        </article>
+        <article class="info-box"  style="margin-top: 20px;">
+            <div class="info-left">
+                <img src="src/img/Static-website-amico.png" style="background-color: #c9f5e3;">
+            </div>
+            <div class="info-right wcc">
+                <div class="info-my">
+                    <h1>WEBSITE</h1>
+                </div>
+                <div class="info-my">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora voluptatum iste labore? Quam voluptas vel, repellendus accusamus, ex aperiam voluptates, repellat voluptatum distinctio dolorum pariatur repudiandae magnam quo doloribus nisi!</p>
+                </div>
+            </div>
+        </article>
+    </section>
+    <!--contact-->
+    <section>
+        <article class="contact-box">
+            <div class="left-contact wcc">
+                <div class="div-contact">
+                    <h1>What do you think about my services?</h1>
+                </div>
+                <div class="div-contact">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In atque voluptatum alias veniam, quod vitae odio ipsum</p>
+                </div>
+                <div class="div-contact">
+                    <button>Copy Email</button>
+                </div>
+            </div>
+            <div class="right-contact wcc">
+                <form>
+                    <div class="form-bord wcc">
+                        <div class="bord-inp">
+                            <input type="email" placeholder="E-mail" required>
+                        </div>
+                        <div class="bord-inp">
+                            <textarea placeholder="Text" required></textarea>
+                        </div>
+                        <div class="bord-inp">
+                            <button type="submit">Send now</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </article>
+    </section>
+    <!--footer-->
+    <footer>
+        <article class="foot-box">
+            <div class="top-foot wc-fs">
+                <div class="logo-bord-foot wcc">
+                    <img src="src/img/logo.png" alt="">
+                </div>
+                <div class="name-bord-foot wcc">
+                    <h1>idougrram</h1>
+                </div>
+                <div class="copy-right wcc">
+                    <p>CopyRight - 2024</p>
+                </div>
+            </div>
+            <div class="body-foot">
+                <div class="list-bord">
+                    <div class="top-list">
+                        <h1>Social media</h1>
+                    </div>
+                    <div class="body-list">
+                        <ul class="wc-fs">
+                            <li>facebook</li>
+                            <li>instagram</li>
+                            <li>twitter</li>
+                            <li>telegram</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="list-bord">
+                    <div class="top-list">
+                        <h1>Contact</h1>
+                    </div>
+                    <div class="body-list">
+                        <ul>
+                            <li>+212 656578591</li>
+                            <li>idogram51@gmail.com</li>
+                            <li>saidifogram5@gmail.com</li>
+                            <li>saididougrram2@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="list-bord">
+                    <div class="top-list">
+                        <h1>Breaf</h1>
+                    </div>
+                    <div class="body-list">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur tenetur consectetur architecto aliquam voluptatibus ducimus</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </footer>
+
+</body>
+</html>
